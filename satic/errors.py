@@ -3,6 +3,11 @@ class SaticError(Exception):
     code = -9999
     msg = "Unknown error."
 
+    @classmethod
+    def get_msg(cls, **kwargs):
+        return cls.msg
+
+
 
 class InternalServerError(SaticError):
     code = -9998

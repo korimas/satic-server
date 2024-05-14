@@ -22,7 +22,7 @@ class BaseView(object):
             result = handler(request)
         except SaticError as e:
             return JSONResponse(
-                status_code=500, content=self.gen_response(False, None, e.code, e.msg)
+                status_code=500, content=self.gen_response(False, None, e.code, e.get_msg())
             )
         except Exception as e:
             return JSONResponse(
