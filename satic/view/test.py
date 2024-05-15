@@ -8,4 +8,4 @@ class TestView(BaseView):
 
     def get(self, request: Request):
         LOG.debug("TestView get method called")
-        return "hello world"
+        return ["hello world"], 100
